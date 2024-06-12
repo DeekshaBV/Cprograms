@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num,sum;
+    scanf("%d",&num);
+    sum= (num<<3);
+    printf("%d",sum);
+    return 0;
+}
