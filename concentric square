@@ -1,0 +1,17 @@
+#include <stdio.h>
+#define MIN(a,b) (a)<(b)?(a):(b)
+#define MAX(a,b) (a)>(b)?(a):(b)
+#include <stdlib.h>
+
+int main()
+{
+    int limit,col,row,num;
+    scanf("%d",&num);
+    limit=2*num;
+    for(row=1;row<limit;row++,printf("\n"))
+    {
+        for(col=1;col<limit;col++)
+            printf("%d",MIN(MIN(row,col),MIN(limit-row,limit-col)));
+    }
+
+}
