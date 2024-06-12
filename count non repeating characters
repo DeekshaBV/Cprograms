@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,j,d,count;
+    char str[50];
+    gets(str);
+    for(i=0;str[i]!=0;i++)
+    {
+        for(j=i+1;str[j]!=0;j++)
+        {
+            if(str[i]==str[j])
+                d++;
+        }
+    }
+    count=strlen(str)-(2*d);
+printf("%d",count);
+
+    return 0;
+}
