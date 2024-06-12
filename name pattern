@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int row,col;
+    for(row=1;row<=7;row++,printf("\n"))
+    {
+        for(col=1;col<=row;col++)
+         {
+            if(col==1)
+           printf("D");
+           else if(col==2)
+            printf(" E");
+            else if(col==3)
+             printf(" E");
+            else if(col==4)
+                printf(" K");
+                else if(col==5)
+                printf(" S");
+                else if(col==6)
+                printf(" H");
+                else if(col==7)
+                printf(" A");
+
+         }
+    }
+
+    return 0;
+}
