@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    int num, revers=0, remain;
+    scanf("%d", &num);
+    while(num != 0)
+        {
+        remain = num % 10;
+        revers = revers*10+remain;
+        num=num/10;
+        }
+    printf("%d\n", revers);
+    return 0;
+}
