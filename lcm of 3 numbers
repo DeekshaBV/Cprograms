@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() 
+{
+    int num1, num2, num3, max, lcm;
+    printf("Enter three numbers: ");
+    scanf("%d%d%d",&num1,&num2,&num3);
+    max=num1>num2?(num1>num3?num1:num3):(num2>num3?num2:num3);
+    lcm=max;
+    while(lcm % num1 != 0 || lcm % num2 != 0 || lcm % num3 != 0) 
+    {
+        lcm++;
+    }
+     printf("LCM is %d\n",lcm);
+    return 0;
+}
