@@ -1,0 +1,39 @@
+#include <stdio.h>
+#define MIN(a,b) (a)<(b)?(a):(b)
+#define MAX(a,b) (a)>(b)?(a):(b)
+int main()
+{
+    int num1, num2, num3, num4;
+    int lnum,snum,secondLargest,thirlarg;
+    scanf("%d %d %d %d", &num1, &num2, &num3, &num4);
+    lnum=MAX(MAX(MAX(num1,num2),num3),num4);
+    snum=MIN(MIN(MIN(num1,num2),num3),num4);
+    secondLargest = (num1 == lnum) ? num2 : num1;
+    for (int i = 2; i <= 4; i++) {
+        if (i == 2)
+            {
+            if ((num2 != lnum) && (num2 > secondLargest))
+            {
+                secondLargest = num2;
+            }
+            }
+        else if (i == 3) {
+            if ((num3 != lnum) && (num3 > secondLargest))
+                {
+                secondLargest = num3;
+               }
+        }
+         else
+            {
+            if ((num4 != lnum) && (num4 > secondLargest))
+            {
+                secondLargest = num4;
+            }
+        }
+    }
+    thirlarg=(num1+num2+num3+num4)-(lnum+snum+secondLargest);
+
+   printf("%d>%d>%d>%d",lnum,secondLargest,thirlarg,snum);
+    return 0;
+}
+
