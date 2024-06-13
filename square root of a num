@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() 
+{
+    int num, guess=1, temp;
+    scanf("%d", &num);
+    do 
+    {
+        temp = root;
+        root = (root + num / root) / 2;
+    } 
+    while(temp!=root); 
+    printf("%d\n",root);
+    return 0;
+}
